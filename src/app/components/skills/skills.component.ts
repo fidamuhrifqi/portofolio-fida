@@ -11,5 +11,7 @@ import { PortfolioDataService } from '../../services/portfolio-data.service';
 })
 export class SkillsComponent {
   dataService = inject(PortfolioDataService);
-  skillsData = this.dataService.data.skills;
+  
+  get skillsData() { return this.dataService.data().skills; }
+  get ui() { return this.dataService.ui(); }
 }

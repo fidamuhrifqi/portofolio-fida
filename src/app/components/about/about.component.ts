@@ -11,5 +11,9 @@ import { PortfolioDataService } from '../../services/portfolio-data.service';
 })
 export class AboutComponent {
   dataService = inject(PortfolioDataService);
-  aboutData = this.dataService.data.about;
+  
+  get aboutData() { return this.dataService.data().about; }
+  get ui() { return this.dataService.ui(); }
+
+  trackByIndex(index: number, item: any): number { return index; }
 }

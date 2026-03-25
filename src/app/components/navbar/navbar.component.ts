@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+
+import { PortfolioDataService } from '../../services/portfolio-data.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,17 +10,25 @@ import { CommonModule } from '@angular/common';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
-  isDarkMode = false;
+export class NavbarComponent {
+  dataService = inject(PortfolioDataService);
   isMenuOpen = false;
+  isDarkMode = false;
 
-  ngOnInit() {
+  get ui() { return this.dataService.ui(); }
+  get currentLang() { return this.dataService.currentLang(); }
+
+  constructor() {
     // Check system preference or local storage
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       this.isDarkMode = true;
       document.documentElement.setAttribute('data-theme', 'dark');
     }
+  }
+
+  toggleLanguage() {
+    this.dataService.toggleLanguage();
   }
 
   toggleTheme() {

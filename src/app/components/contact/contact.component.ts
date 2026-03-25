@@ -12,7 +12,9 @@ import { PortfolioDataService } from '../../services/portfolio-data.service';
 export class ContactComponent {
   dataService = inject(PortfolioDataService);
   cdr = inject(ChangeDetectorRef);
-  contactData = this.dataService.data.contact;
+  
+  get contactData() { return this.dataService.data().contact; }
+  get ui() { return this.dataService.ui(); }
   
   emailCopied = false;
 

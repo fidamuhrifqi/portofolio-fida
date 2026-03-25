@@ -11,7 +11,8 @@ import { PortfolioDataService } from '../../services/portfolio-data.service';
 })
 export class HeroComponent {
   dataService = inject(PortfolioDataService);
-  heroData = this.dataService.data.hero;
+  
+  get heroData() { return this.dataService.data().hero; }
 
   scrollTo(section: string, event: Event) {
     event.preventDefault();

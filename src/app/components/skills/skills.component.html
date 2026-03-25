@@ -1,6 +1,6 @@
 <section id="skills" class="skills-section">
   <div class="container">
-    <h2 class="section-title">Technical Skills</h2>
+    <h2 class="section-title">{{ ui.titleSkills }}</h2>
 
     <div class="skills-grid">
       <!-- Backend Group -->
@@ -12,24 +12,24 @@
       </div>
 
       <!-- Databases Group -->
-      <div class="skill-card fade-in delay-2">
-        <h3>Databases</h3>
+      <div class="skill-card fade-in delay-3">
+        <h3>{{ ui.labelDatabase }}</h3>
         <div class="pill-container">
           <span class="pill" *ngFor="let item of skillsData.databases">{{ item }}</span>
         </div>
       </div>
 
       <!-- DevOps & Tools Group -->
-      <div class="skill-card fade-in delay-3">
-        <h3>DevOps & Tools</h3>
+      <div class="skill-card fade-in delay-4">
+        <h3>{{ ui.labelTools }}</h3>
         <div class="pill-container">
           <span class="pill" *ngFor="let item of skillsData.tools">{{ item }}</span>
         </div>
       </div>
 
       <!-- Frontend Group -->
-      <div class="skill-card fade-in delay-1">
-        <h3>Frontend</h3>
+      <div class="skill-category card fade-in delay-1">
+        <h3>{{ ui.labelFrontend }}</h3>
         <div class="pill-container">
           <span class="pill" *ngFor="let item of skillsData.frontend">{{ item }}</span>
         </div>
