@@ -97,16 +97,10 @@
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  flex-direction: column;
-  gap: 5px;
-
-  span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background-color: var(--text-primary);
-    transition: var(--transition);
-  }
+  color: var(--text-primary);
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
 }
 
 @media (max-width: 768px) {
@@ -131,15 +125,5 @@
 
   .mobile-menu-toggle {
     display: flex;
-  }
-
-  .navbar.menu-open .mobile-menu-toggle span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  .navbar.menu-open .mobile-menu-toggle span:nth-child(2) {
-    opacity: 0;
-  }
-  .navbar.menu-open .mobile-menu-toggle span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
   }
 }

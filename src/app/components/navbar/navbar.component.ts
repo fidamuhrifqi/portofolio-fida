@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, HostListener, ElementRef } from '@angular/core';
 
 import { PortfolioDataService } from '../../services/portfolio-data.service';
 import { CommonModule } from '@angular/common';
@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class NavbarComponent {
   dataService = inject(PortfolioDataService);
+  elementRef = inject(ElementRef);
   isMenuOpen = false;
   isDarkMode = false;
 
@@ -44,6 +45,20 @@ export class NavbarComponent {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    if (this.isMenuOpen && !this.elementRef.nativeElement.contains(event.target)) {
+      this.isMenuOpen = false;
+    }
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (this.isMenuOpen) {
+      this.isMenuOpen = false;
+    }
   }
 
   scrollTo(section: string, event: Event) {
