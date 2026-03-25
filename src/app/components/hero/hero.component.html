@@ -1,0 +1,13 @@
+<section id="hero" class="hero-section">
+  <div class="hero-content fade-in">
+    <p class="greeting delay-1">Hello, I'm</p>
+    <h1 class="name delay-1">{{ heroData.name }}</h1>
+    <h2 class="title delay-2">{{ heroData.title }}</h2>
+    <p class="summary delay-2">{{ heroData.summary }}</p>
+    
+    <div class="cta-buttons delay-3">
+      <a href="#projects" class="btn btn-primary" (click)="scrollTo('projects', $event)">{{ heroData.ctaPrimary }}</a>
+      <a href="#contact" class="btn btn-outline" (click)="scrollTo('contact', $event)">{{ heroData.ctaSecondary }}</a>
+    </div>
+  </div>
+</section>

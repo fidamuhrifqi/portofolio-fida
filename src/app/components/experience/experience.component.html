@@ -1,0 +1,22 @@
+<section id="experience" class="experience-section">
+  <div class="container">
+    <h2 class="section-title">Work Experience</h2>
+    
+    <div class="timeline">
+      <div *ngFor="let item of experienceData; let i = index" class="timeline-item fade-in" [class.delay-1]="i === 0" [class.delay-2]="i === 1" [class.delay-3]="i > 1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content card">
+          <div class="job-header">
+            <h3>{{ item.role }}</h3>
+            <span class="period">{{ item.period }}</span>
+          </div>
+          <h4 class="company">{{ item.company }}</h4>
+          <p class="description">{{ item.description }}</p>
+          <ul class="highlights">
+            <li *ngFor="let highlight of item.highlights">{{ highlight }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
