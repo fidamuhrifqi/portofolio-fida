@@ -1,49 +1,108 @@
-.projects-section {
-  padding: 8rem 2rem;
-}
-
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .project-card {
+  grid-column: span 3;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  padding: 2rem;
+  min-height: 21rem;
+  padding: clamp(1.25rem, 2.4vw, 1.9rem);
 }
 
-.folder-icon {
-  margin-bottom: 2rem;
+.project-card--featured {
+  grid-column: span 4;
+  min-height: 24rem;
+  background:
+    linear-gradient(135deg, var(--surface-strong), var(--surface) 70%),
+    repeating-linear-gradient(90deg, transparent 0, transparent 24px, rgba(155, 79, 38, 0.08) 25px);
+}
+
+.project-card:nth-child(2) {
+  grid-column: span 2;
+}
+
+.project-card:nth-child(5) {
+  grid-column: span 6;
+  min-height: 16rem;
+}
+
+.project-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.2rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
+.project-index {
   color: var(--accent-color);
 }
 
+.project-type {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.project-content {
+  flex: 1;
+}
+
 .project-title {
-  font-size: 1.25rem;
-  color: var(--text-primary);
+  max-width: 11ch;
   margin-bottom: 1rem;
+  color: var(--text-primary);
+  font-size: clamp(1.45rem, 3vw, 2.45rem);
+  letter-spacing: -0.05em;
+}
+
+.project-card--featured .project-title,
+.project-card:nth-child(5) .project-title {
+  max-width: 17ch;
 }
 
 .project-description {
+  max-width: 54ch;
+  margin-bottom: 2rem;
   color: var(--text-secondary);
   font-size: 1rem;
-  margin-bottom: 2rem;
+  line-height: 1.65;
 }
 
-.project-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  font-family: var(--font-sans);
-  font-size: 0.875rem;
-  color: var(--text-tertiary);
-  
-  span {
-    font-weight: 500;
+.tech-stack {
+  margin-top: auto;
+}
+
+@media (max-width: 920px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-card,
+  .project-card--featured,
+  .project-card:nth-child(2),
+  .project-card:nth-child(5) {
+    grid-column: span 1;
+    min-height: 20rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card,
+  .project-card--featured,
+  .project-card:nth-child(5) {
+    min-height: auto;
   }
 }

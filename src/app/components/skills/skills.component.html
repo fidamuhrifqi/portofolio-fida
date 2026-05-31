@@ -3,37 +3,45 @@
     <h2 class="section-title">{{ ui.titleSkills }}</h2>
 
     <div class="skills-grid">
-      <!-- Backend Group -->
-      <div class="skill-card fade-in delay-1">
-        <h3>Backend & Frameworks</h3>
+      <article class="skill-card skill-card--primary fade-in delay-1">
+        <div class="skill-heading">
+          <span>01</span>
+          <h3>Backend & Frameworks</h3>
+        </div>
         <div class="pill-container">
           <span class="pill" *ngFor="let item of skillsData.backend">{{ item }}</span>
         </div>
-      </div>
+      </article>
 
-      <!-- Databases Group -->
-      <div class="skill-card fade-in delay-3">
-        <h3>{{ ui.labelDatabase }}</h3>
+      <article class="skill-card skill-card--compact fade-in delay-2">
+        <div class="skill-heading">
+          <span>02</span>
+          <h3>{{ ui.labelDatabase }}</h3>
+        </div>
         <div class="pill-container">
           <span class="pill" *ngFor="let item of skillsData.databases">{{ item }}</span>
         </div>
-      </div>
+      </article>
 
-      <!-- DevOps & Tools Group -->
-      <div class="skill-card fade-in delay-4">
-        <h3>{{ ui.labelTools }}</h3>
+      <article class="skill-card skill-card--wide fade-in delay-3">
+        <div class="skill-heading">
+          <span>03</span>
+          <h3>{{ ui.labelTools }}</h3>
+        </div>
         <div class="pill-container">
           <span class="pill" *ngFor="let item of skillsData.tools">{{ item }}</span>
         </div>
-      </div>
+      </article>
 
-      <!-- Frontend Group -->
-      <div class="skill-category card fade-in delay-1">
-        <h3>{{ ui.labelFrontend }}</h3>
+      <article class="skill-card fade-in delay-4">
+        <div class="skill-heading">
+          <span>04</span>
+          <h3>{{ ui.labelFrontend }}</h3>
+        </div>
         <div class="pill-container">
           <span class="pill" *ngFor="let item of skillsData.frontend">{{ item }}</span>
         </div>
-      </div>
+      </article>
     </div>
   </div>
 </section>

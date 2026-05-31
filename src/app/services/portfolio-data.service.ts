@@ -16,15 +16,15 @@ export class PortfolioDataService {
       greeting: "Hello, I'm",
       name: 'Fida Muhamad Rifqi',
       title: 'Backend Engineer (Fullstack Experience)',
-      summary: 'Passionate Backend Engineer with 5+ years of experience specializing in Java, Spring Boot, system integration, and API development. Proven track record of delivering secure and scalable enterprise solutions in the banking industry.',
+      summary: 'Backend Engineer with 5+ years of experience in Java, Spring Boot, system integration, and API development. I build secure enterprise services for banking workflows where reliability, observability, and clear contracts matter.',
       ctaPrimary: 'View Projects',
-      ctaSecondary: 'Contact Me'
+      ctaSecondary: 'Contact me'
     },
     about: {
       paragraphs: [
         'I am a performance-driven Backend Engineer with over 5 years of hands-on experience designing, developing, and optimizing enterprise-grade applications. Specializing in Java and Spring Boot, I have a deep understanding of system integrations, microservices, and database optimization.',
-        'Throughout my career in the banking sector, I have successfully led backend initiatives, from building cutting-edge REST APIs to integrating complex workflows and robust security measures. I thrive in Agile environments, collaborating seamlessly with cross-functional teams to troubleshoot critical production issues and deliver scalable architectures.',
-        'Always eager to tackle new technical challenges, I continually explore emerging deployment patterns and architectures to elevate system reliability and performance.'
+        'Throughout my career in the banking sector, I have led backend initiatives from REST API development to complex workflow integration and security hardening. I work closely with cross-functional teams to troubleshoot production issues and keep architecture maintainable under real operational pressure.',
+        'I enjoy technical problems that have business weight: safer upgrades, faster queries, cleaner integrations, and production systems that teams can operate with confidence.'
       ]
     },
     skills: {
@@ -136,15 +136,15 @@ export class PortfolioDataService {
       greeting: 'Halo, saya',
       name: 'Fida Muhamad Rifqi',
       title: 'Backend Engineer (Pengalaman Fullstack)',
-      summary: 'Backend Engineer yang penuh semangat dengan lebih dari 5 tahun pengalaman, berspesialisasi dalam Java, Spring Boot, integrasi sistem, dan pengembangan API. Memiliki rekam jejak terbukti dalam membangun solusi skala perusahaan (Enterprise) yang aman di industri perbankan.',
-      ctaPrimary: 'Lihat Project',
-      ctaSecondary: 'Hubungi Saya'
+      summary: 'Backend Engineer dengan lebih dari 5 tahun pengalaman di Java, Spring Boot, integrasi sistem, dan pengembangan API. Saya membangun layanan enterprise untuk workflow perbankan yang membutuhkan keamanan, observability, dan reliabilitas.',
+      ctaPrimary: 'Lihat proyek',
+      ctaSecondary: 'Hubungi saya'
     },
     about: {
       paragraphs: [
         'Saya adalah seorang Backend Engineer yang berorientasi pada kinerja tinggi dengan lebih dari 5 tahun pengalaman langsung dalam merancang, mengembangkan, dan mengoptimalkan aplikasi skala perusahaan. Berspesialisasi dalam Java dan Spring Boot, saya memiliki pemahaman mendalam tentang integrasi antarsistem, microservices, dan optimalisasi database.',
-        'Sepanjang karir saya di sektor perbankan perbankan, saya sukses memimpin berbagai inisiatif pengembangan backend, mulai dari membangun REST API canggih hingga mengintegrasikan alur kerja berlapis yang kompleks dan sistem keamanan yang kuat. Saya terbiasa dan cepat beradaptasi dalam lingkungan kerja Agile.',
-        'Selalu bersemangat untuk menghadapi tantangan teknis baru, saya terus mempelajari dan mengeksplorasi tren dan arsitektur penggelaran (deployment) terkini untuk terus meningkatkan performa dan stabilitas sistem yang saya tangani.'
+        'Sepanjang karier saya di sektor perbankan, saya memimpin berbagai inisiatif backend, mulai dari membangun REST API hingga mengintegrasikan alur kerja berlapis dan penguatan keamanan. Saya terbiasa berkolaborasi dengan tim lintas fungsi untuk menangani isu produksi dan menjaga arsitektur tetap mudah dirawat.',
+        'Saya menyukai masalah teknis yang punya dampak bisnis nyata: upgrade yang lebih aman, query yang lebih cepat, integrasi yang lebih bersih, dan sistem produksi yang mudah dioperasikan.'
       ]
     },
     skills: this.dataEn.skills, // Keterampilan teknis bahasa universal
@@ -183,14 +183,14 @@ export class PortfolioDataService {
         highlights: [
           'Mengonsep diagram aliran/relasi data (ERD) guna menstruktur seluruh siklus pendataan utama proyek.',
           'Menerjemahkan poin kebutuhan operasional dari para stakeholder ke sebuah dokumen fungsional terpadu.',
-          'Menjalankan ratusan tes fungsional (manual testing) untuk mendeteksi *bugs* dan memverifikasi agar sistem siap dipasarkan.'
+          'Menjalankan ratusan tes fungsional manual untuk mendeteksi bug dan memverifikasi kesiapan sistem.'
         ]
       },
       {
         company: 'Poltekkes Kemenkes Tasikmalaya',
         role: 'Intern (Software Tester)',
         period: 'November 2017 – Januari 2018',
-        description: 'Membantu tahap validasi program pada proses ditalisasi klasifikasi dunia medis.',
+        description: 'Membantu tahap validasi program pada proses digitalisasi klasifikasi dunia medis.',
         highlights: [
           'Menyusun skenario kelayakan untuk tes kegunaan sekaligus mengecek keakurasian data bagi kodifikasi ICD-10.',
           'Mendokumentasikan semua inkonversi serta berinteraksi langsung secara intens dengan pihak pengembang perangkat lunak agar cepat tertangani.'
@@ -215,12 +215,12 @@ export class PortfolioDataService {
       },
       {
         name: 'Sub-Aplikasi Antrean Otomatis',
-        description: 'Sistem pembuatan tiket antrean otomatis tingkat cabang yang terhubung dengan layanan logis *backend* dan perintah ke pencetak suhu (Thermal Printer).',
+        description: 'Sistem pembuatan tiket antrean otomatis tingkat cabang yang terhubung dengan layanan backend dan perintah ke thermal printer.',
         techStack: ['Java 21', 'Spring Boot 3.0', 'Angular 17']
       },
       {
         name: 'Mandiri Single Sign-On (SSO)',
-        description: 'Sistem autentikasi rahasia terpusat untuk alur masuk internal menggunakan koneksi LDAP yang mensortir kontrol atas privilage para pengguna.',
+        description: 'Sistem autentikasi terpusat untuk alur masuk internal menggunakan koneksi LDAP dan kontrol hak akses pengguna.',
         techStack: ['Java', 'Spring Boot', 'LDAP', 'PostgreSQL', 'JWT']
       }
     ],
@@ -248,13 +248,13 @@ export class PortfolioDataService {
     navExperience: 'Experience',
     navProjects: 'Projects',
     navContact: 'Contact',
-    titleAbout: 'About Me',
-    titleSkills: 'Technical Skills',
-    titleExperience: 'Work Experience',
-    titleProjects: 'Noteworthy Projects',
+    titleAbout: 'About me',
+    titleSkills: 'Technical skills',
+    titleExperience: 'Work experience',
+    titleProjects: 'Selected projects',
     titleEducation: 'Education',
-    titleContact: 'Get In Touch',
-    subtitleContact: 'I\'m currently looking for new opportunities. Whether you have a question or just want to say hi, I\'ll try my best to get back to you!',
+    titleContact: 'Get in touch',
+    subtitleContact: 'I\'m open to backend and fullstack opportunities where engineering quality matters. Send a note and I\'ll get back to you.',
     btnEmail: 'Copy Email',
     btnCopied: 'Email Copied!',
     labelBackend: 'Backend',
@@ -269,13 +269,13 @@ export class PortfolioDataService {
     navExperience: 'Pengalaman',
     navProjects: 'Proyek',
     navContact: 'Kontak',
-    titleAbout: 'Tentang Saya',
-    titleSkills: 'Keahlian Teknis',
-    titleExperience: 'Pengalaman Kerja',
-    titleProjects: 'Proyek Penting',
+    titleAbout: 'Tentang saya',
+    titleSkills: 'Keahlian teknis',
+    titleExperience: 'Pengalaman kerja',
+    titleProjects: 'Proyek pilihan',
     titleEducation: 'Pendidikan',
-    titleContact: 'Hubungi Saya',
-    subtitleContact: 'Saya sedang terbuka untuk peluang baru. Apabila Anda memiliki pertanyaan, tawaran menarik, atau sekadar ingin menyapa, saya akan berusaha merespons secepatnya!',
+    titleContact: 'Hubungi saya',
+    subtitleContact: 'Saya terbuka untuk peluang backend dan fullstack yang mengutamakan kualitas engineering. Kirim pesan dan saya akan merespons.',
     btnEmail: 'Salin Email',
     btnCopied: 'Tersalin!',
     labelBackend: 'Backend',

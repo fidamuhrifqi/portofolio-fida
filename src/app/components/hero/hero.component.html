@@ -1,13 +1,66 @@
-<section id="hero" class="hero-section">
-  <div class="hero-content fade-in">
-    <p class="greeting fade-in delay-1">{{ heroData.greeting }}</p>
-    <h1 class="name delay-1">{{ heroData.name }}</h1>
-    <h2 class="title delay-2">{{ heroData.title }}</h2>
-    <p class="summary delay-2">{{ heroData.summary }}</p>
-    
-    <div class="cta-buttons delay-3">
-      <a href="#projects" class="btn btn-primary" (click)="scrollTo('projects', $event)">{{ heroData.ctaPrimary }}</a>
-      <a href="#contact" class="btn btn-outline" (click)="scrollTo('contact', $event)">{{ heroData.ctaSecondary }}</a>
+<section id="hero" class="hero-section" aria-labelledby="hero-title">
+  <div class="hero-layout">
+    <div class="hero-content fade-in">
+      <p class="greeting">{{ heroData.greeting }}</p>
+      <h1 id="hero-title" class="name">{{ heroData.name }}</h1>
+      <p class="title">{{ heroData.title }}</p>
+      <p class="summary">{{ heroData.summary }}</p>
+
+      <div class="cta-buttons">
+        <a href="#projects" class="btn btn-primary" (click)="scrollTo('projects', $event)">{{ heroData.ctaPrimary }}</a>
+        <a href="#contact" class="btn btn-outline" (click)="scrollTo('contact', $event)">{{ heroData.ctaSecondary }}</a>
+      </div>
+
+      <div class="metric-strip" aria-label="Career highlights">
+        <div>
+          <strong>5+</strong>
+          <span>years shipping enterprise systems</span>
+        </div>
+        <div>
+          <strong>80%+</strong>
+          <span>unit coverage targets on releases</span>
+        </div>
+        <div>
+          <strong>Java 21</strong>
+          <span>modern JVM upgrade experience</span>
+        </div>
+      </div>
     </div>
+
+    <aside class="systems-panel fade-in delay-2" aria-label="Backend systems snapshot">
+      <div class="panel-header">
+        <span>systems map</span>
+        <span>banking-grade</span>
+      </div>
+
+      <div class="system-stack">
+        <div class="system-layer layer-api">
+          <span class="layer-code">01</span>
+          <strong>REST API surface</strong>
+          <span>validation, JWT, LDAP</span>
+        </div>
+        <div class="system-layer layer-core">
+          <span class="layer-code">02</span>
+          <strong>Spring Boot services</strong>
+          <span>workflow, locking, reporting</span>
+        </div>
+        <div class="system-layer layer-stream">
+          <span class="layer-code">03</span>
+          <strong>Async integrations</strong>
+          <span>Kafka, Filebeat, sidecars</span>
+        </div>
+        <div class="system-layer layer-data">
+          <span class="layer-code">04</span>
+          <strong>Data stores</strong>
+          <span>SQL Server, Oracle, PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="panel-footer">
+        <span>latency-minded</span>
+        <span>secure by default</span>
+        <span>operable in production</span>
+      </div>
+    </aside>
   </div>
 </section>

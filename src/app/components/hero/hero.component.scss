@@ -1,81 +1,251 @@
 .hero-section {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  text-align: center;
-  padding-top: 80px; /* Offset for navbar */
+  padding-top: 7.5rem;
+  padding-bottom: clamp(4rem, 8vw, 7rem);
 }
 
-/* Beautifully blended hero glow */
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 150vw;
-  height: 150vh;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle closest-side, var(--accent-color) 0%, transparent 70%);
-  opacity: 0.15;
-  filter: blur(100px);
-  pointer-events: none;
-  z-index: 1;
+.hero-layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+  min-width: 0;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 10;
-  max-width: 800px;
+  min-width: 0;
+  max-width: 760px;
 }
 
 .greeting {
-  font-family: var(--font-heading);
-  font-weight: 600;
+  display: inline-flex;
+  margin-bottom: 1.1rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
   color: var(--accent-color);
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
 }
 
 .name {
-  font-size: clamp(3rem, 8vw, 5rem);
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(to right, var(--text-primary), var(--accent-color));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.65rem;
+  max-width: 9.5ch;
+  color: var(--text-primary);
+  letter-spacing: -0.07em;
 }
 
 .title {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: 500;
-  color: var(--text-secondary);
-  margin-bottom: 1.5rem;
+  max-width: 100%;
+  margin-bottom: 1.4rem;
+  color: var(--accent-color);
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 3.2vw, 2.35rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
 }
 
 .summary {
-  font-size: 1.2rem;
+  max-width: 62ch;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  font-size: clamp(1.05rem, 1.7vw, 1.22rem);
+}
+
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0;
+}
+
+.metric-strip div {
+  min-height: 6.25rem;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+.metric-strip strong {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2.2vw, 1.85rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.metric-strip span {
+  display: block;
   color: var(--text-tertiary);
-  margin-bottom: 2.5rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.35;
 }
 
 .cta-buttons {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.9rem;
 }
 
+.systems-panel {
+  position: relative;
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  background:
+    linear-gradient(135deg, var(--surface), rgba(255, 255, 255, 0.08)),
+    repeating-linear-gradient(90deg, transparent 0, transparent 22px, rgba(155, 79, 38, 0.08) 23px);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
 
+.panel-header,
+.panel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
 
-@media (max-width: 768px) {
-  .cta-buttons {
+.panel-header {
+  padding: 0.4rem 0.25rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.panel-footer {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 1rem 0.25rem 0.35rem;
+}
+
+.panel-footer span {
+  padding: 0.35rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface-strong);
+}
+
+.system-stack {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem 0 0.25rem;
+}
+
+.system-layer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.3rem 0.75rem;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  background: color-mix(in srgb, var(--surface-solid) 74%, transparent);
+  transition: transform var(--transition), border-color var(--transition), background-color var(--transition);
+}
+
+.system-layer:hover {
+  transform: translateX(-4px);
+  border-color: rgba(155, 79, 38, 0.42);
+}
+
+.layer-core {
+  margin-left: 2rem;
+}
+
+.layer-stream {
+  margin-left: 4rem;
+}
+
+.layer-data {
+  margin-left: 1.2rem;
+}
+
+.layer-code {
+  grid-row: span 2;
+  display: inline-grid;
+  place-items: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  color: var(--accent-hover);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.system-layer strong {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.system-layer > span:last-child {
+  color: var(--text-tertiary);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+@media (max-width: 980px) {
+  .hero-section {
+    min-height: auto;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .systems-panel {
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    padding-top: 6.5rem;
+  }
+
+  .name {
+    max-width: 8.5ch;
+  }
+
+  .metric-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .metric-strip div:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+
+  .layer-core,
+  .layer-stream,
+  .layer-data {
+    margin-left: 0;
+  }
+
+  .panel-header {
+    align-items: flex-start;
     flex-direction: column;
-    width: 200px;
-    margin: 0 auto;
   }
 }

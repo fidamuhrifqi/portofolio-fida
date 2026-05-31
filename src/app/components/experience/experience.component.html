@@ -3,20 +3,24 @@
     <h2 class="section-title">{{ ui.titleExperience }}</h2>
     
     <div class="timeline">
-      <div *ngFor="let item of experienceData; let i = index; trackBy: trackByIndex" class="timeline-item fade-in" [class.delay-1]="i === 0" [class.delay-2]="i === 1" [class.delay-3]="i > 1">
-        <div class="timeline-dot"></div>
+      <article *ngFor="let item of experienceData; let i = index; trackBy: trackByIndex" class="timeline-item fade-in" [class.delay-1]="i === 0" [class.delay-2]="i === 1" [class.delay-3]="i > 1">
+        <div class="timeline-marker">
+          <span>{{ i + 1 }}</span>
+        </div>
         <div class="timeline-content card">
           <div class="job-header">
-            <h3>{{ item.role }}</h3>
-            <span class="period">{{ item.period }}</span>
+            <div>
+              <h3>{{ item.role }}</h3>
+              <h4 class="company">{{ item.company }}</h4>
+            </div>
+            <time class="period">{{ item.period }}</time>
           </div>
-          <h4 class="company">{{ item.company }}</h4>
           <p class="description">{{ item.description }}</p>
           <ul class="highlights">
             <li *ngFor="let highlight of item.highlights; trackBy: trackByIndex">{{ highlight }}</li>
           </ul>
         </div>
-      </div>
+      </article>
     </div>
   </div>
 </section>

@@ -1,115 +1,143 @@
-.experience-section {
-  padding: 8rem 2rem;
-}
-
 .timeline {
   position: relative;
-  max-width: 800px;
+  display: grid;
+  gap: 1.2rem;
+  max-width: 980px;
   margin: 0 auto;
-  padding-left: 2rem;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 4px;
-    height: 100%;
-    width: 2px;
-    background-color: var(--border-color);
-  }
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 1.25rem;
+  bottom: 1.25rem;
+  left: 1.45rem;
+  width: 1px;
+  background: var(--border-color);
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 3rem;
-  
-  &:last-child {
-    margin-bottom: 0;
-  }
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: 1.1rem;
 }
 
-.timeline-dot {
-  position: absolute;
-  left: -2rem;
-  top: 1.5rem;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  transform: translateX(-50%);
-  border: 3px solid var(--bg-color);
-  box-shadow: 0 0 0 3px var(--accent-color);
-  z-index: 2;
+.timeline-marker {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  background: var(--surface-solid);
+  box-shadow: var(--shadow-sm);
+}
+
+.timeline-marker span {
+  color: var(--accent-color);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .timeline-content {
-  padding: 2rem;
-  
-  .job-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-    
-    h3 {
-      margin-bottom: 0;
-      color: var(--accent-color);
-    }
-    
-    .period {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text-tertiary);
-      background-color: var(--bg-tertiary);
-      padding: 0.25rem 0.75rem;
-      border-radius: 9999px;
-    }
-  }
-  
-  .company {
-    font-size: 1.125rem;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-    font-weight: 600;
-  }
-  
-  .description {
-    margin-bottom: 1.5rem;
-    font-style: italic;
-  }
-  
-  .highlights {
-    list-style-position: outside;
-    padding-left: 1.25rem;
-    
-    li {
-      color: var(--text-secondary);
-      margin-bottom: 0.75rem;
-      line-height: 1.6;
-      
-      &::marker {
-        color: var(--accent-color);
-      }
-      
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
+  padding: clamp(1.25rem, 3vw, 2rem);
 }
 
-@media (max-width: 768px) {
-  .timeline {
-    padding-left: 1.5rem;
-    
-    &::before {
-      left: 0;
-    }
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.job-header h3 {
+  margin: 0 0 0.35rem;
+  color: var(--text-primary);
+  font-size: clamp(1.25rem, 2.4vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+.company {
+  margin: 0;
+  color: var(--accent-color);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.period {
+  flex: 0 0 auto;
+  max-width: 13rem;
+  padding: 0.45rem 0.6rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface-strong);
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: right;
+}
+
+.description {
+  max-width: 68ch;
+  margin-bottom: 1.35rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.highlights {
+  display: grid;
+  gap: 0.7rem;
+  padding: 0;
+  list-style: none;
+}
+
+.highlights li {
+  position: relative;
+  padding-left: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.62;
+}
+
+.highlights li::before {
+  content: '';
+  position: absolute;
+  top: 0.7em;
+  left: 0;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 50%;
+  background: var(--accent-color);
+}
+
+@media (max-width: 720px) {
+  .timeline::before {
+    left: 1.2rem;
   }
   
-  .timeline-dot {
-    left: -1.5rem;
+  .timeline-item {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: 0.85rem;
+  }
+
+  .timeline-marker {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .job-header {
+    flex-direction: column;
+  }
+
+  .period {
+    max-width: none;
+    text-align: left;
   }
 }

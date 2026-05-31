@@ -2,10 +2,20 @@
   <div class="container">
     <h2 class="section-title">{{ ui.titleAbout }}</h2>
     
-    <div class="about-content">
+    <div class="about-shell">
       <div class="text-content">
         <p *ngFor="let para of aboutData.paragraphs; let i = index; trackBy: trackByIndex" class="fade-in delay-{{i+1}}">{{ para }}</p>
       </div>
+
+      <aside class="about-signal fade-in delay-2" aria-label="Engineering focus">
+        <span class="signal-label">focus areas</span>
+        <div class="signal-list">
+          <span>API design</span>
+          <span>system integration</span>
+          <span>database performance</span>
+          <span>production support</span>
+        </div>
+      </aside>
     </div>
   </div>
 </section>

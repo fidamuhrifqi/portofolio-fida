@@ -1,4 +1,4 @@
-import { Component, OnInit, inject, HostListener, ElementRef } from '@angular/core';
+import { Component, inject, HostListener, ElementRef } from '@angular/core';
 
 import { PortfolioDataService } from '../../services/portfolio-data.service';
 import { CommonModule } from '@angular/common';
@@ -15,6 +15,8 @@ export class NavbarComponent {
   elementRef = inject(ElementRef);
   isMenuOpen = false;
   isDarkMode = false;
+  activeSection = 'hero';
+  private readonly sectionIds = ['hero', 'about', 'skills', 'experience', 'projects', 'education', 'contact'];
 
   get ui() { return this.dataService.ui(); }
   get currentLang() { return this.dataService.currentLang(); }
@@ -59,11 +61,26 @@ export class NavbarComponent {
     if (this.isMenuOpen) {
       this.isMenuOpen = false;
     }
+    this.updateActiveSection();
   }
 
   scrollTo(section: string, event: Event) {
     event.preventDefault();
     this.isMenuOpen = false;
+    this.activeSection = section;
     document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  private updateActiveSection() {
+    const scrollPosition = window.scrollY + 140;
+    const currentSection = this.sectionIds
+      .map(id => ({ id, element: document.getElementById(id) }))
+      .filter((item): item is { id: string; element: HTMLElement } => !!item.element)
+      .reverse()
+      .find(item => item.element.offsetTop <= scrollPosition);
+
+    if (currentSection) {
+      this.activeSection = currentSection.id;
+    }
   }
 }
