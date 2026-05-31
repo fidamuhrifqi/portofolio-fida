@@ -71,10 +71,36 @@
 
 .project-description {
   max-width: 54ch;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
   color: var(--text-secondary);
   font-size: 1rem;
   line-height: 1.65;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 2rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgba(155, 79, 38, 0.34);
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  color: var(--accent-hover);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  &:hover {
+    background: var(--text-primary);
+    color: var(--bg-color);
+    transform: translateY(-2px);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--accent-soft);
+    outline-offset: 3px;
+  }
 }
 
 .tech-stack {

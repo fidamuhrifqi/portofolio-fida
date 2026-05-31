@@ -15,8 +15,8 @@ export class PortfolioDataService {
     hero: {
       greeting: "Hello, I'm",
       name: 'Fida Muhamad Rifqi',
-      title: 'Backend Engineer (Fullstack Experience)',
-      summary: 'Backend Engineer with 5+ years of experience in Java, Spring Boot, system integration, and API development. I build secure enterprise services for banking workflows where reliability, observability, and clear contracts matter.',
+      title: 'Backend Engineer (Fullstack Experience) & AI Enthusiast',
+      summary: 'Backend Engineer with 5+ years of experience in Java, Spring Boot, system integration, and API development. I build secure enterprise services for banking workflows while exploring AI products, chatbot systems, and practical LLM integrations.',
       ctaPrimary: 'View Projects',
       ctaSecondary: 'Contact me'
     },
@@ -24,20 +24,21 @@ export class PortfolioDataService {
       paragraphs: [
         'I am a performance-driven Backend Engineer with over 5 years of hands-on experience designing, developing, and optimizing enterprise-grade applications. Specializing in Java and Spring Boot, I have a deep understanding of system integrations, microservices, and database optimization.',
         'Throughout my career in the banking sector, I have led backend initiatives from REST API development to complex workflow integration and security hardening. I work closely with cross-functional teams to troubleshoot production issues and keep architecture maintainable under real operational pressure.',
-        'I enjoy technical problems that have business weight: safer upgrades, faster queries, cleaner integrations, and production systems that teams can operate with confidence.'
+        'I am also an AI enthusiast who enjoys turning everyday problems into useful chatbot workflows. My current personal AI work focuses on natural-language assistants, LLM-backed parsing, and practical automation that still feels simple for real users.'
       ]
     },
     skills: {
       backend: ['Java (8, 17, 21)', 'Spring Boot (2.x, 3.x)', 'Apache Kafka', 'JasperReports'],
       databases: ['PostgreSQL', 'SQL Server', 'Oracle Database', 'MySQL'],
       tools: ['Git', 'Docker', 'CI/CD', 'Elastic', 'WinSCP', 'LDAP', 'JWT', 'Liquibase', 'Jira'],
-      frontend: ['Angular (14, 17, 21)', 'TypeScript', 'JavaScript']
+      frontend: ['Angular (14, 17, 21)', 'TypeScript', 'JavaScript'],
+      ai: ['OpenAI SDK', 'MiniMax API', 'Telegram Bot', 'LLM Prompting', 'Natural Language Parsing']
     },
     experience: [
       {
         company: 'PT Bank SMBC Indonesia Tbk',
         role: 'Fullstack Developer (Backend-Focused)',
-        period: 'March 2020 – Present',
+        period: 'March 2020 - Present',
         description: 'Designed and maintained server-side applications using Spring Boot, developed REST APIs, optimized database queries, and handled system integrations for enterprise banking systems.',
         highlights: [
           'Led R&D as Technical Owner, designing and implementing a Filebeat sidecar architecture for robust log shipping across containerized environments.',
@@ -51,7 +52,7 @@ export class PortfolioDataService {
       {
         company: 'PT Bank Mandiri Tbk',
         role: 'Backend Developer',
-        period: 'December 2019 – March 2020',
+        period: 'December 2019 - March 2020',
         description: 'Contributed to secure backend services and API development within an Agile team.',
         highlights: [
           'Engineered authentication backend services and designed secure login flows using Spring Boot.',
@@ -63,7 +64,7 @@ export class PortfolioDataService {
       {
         company: 'Pilgrims of Hajj and Umrah',
         role: 'Analyst and Tester Intern',
-        period: 'January 2020 – February 2020',
+        period: 'January 2020 - February 2020',
         description: 'Focused on system analysis, initial database design, and ensuring UX clarity.',
         highlights: [
           'Crafted entity-relationship diagrams (ERD) to support and structure core data management requirements.',
@@ -74,7 +75,7 @@ export class PortfolioDataService {
       {
         company: 'Poltekkes Kemenkes Tasikmalaya',
         role: 'Tester Intern',
-        period: 'November 2017 – January 2018',
+        period: 'November 2017 - January 2018',
         description: 'Validated application functionality during the digitalization of medical classifications.',
         highlights: [
           'Authored and executed manual test strategies to validate usability and data accuracy for ICD-10 systems.',
@@ -84,42 +85,59 @@ export class PortfolioDataService {
     ],
     projects: [
       {
+        name: 'Kulkas Pintar Bot',
+        type: 'AI personal lab',
+        url: 'https://github.com/fidamuhrifqi/kulkas-pintar',
+        description: 'An AI-powered Telegram bot for household fridge inventory. It understands Indonesian natural-language input, converts measurement units, tracks stock changes, and suggests recipe ideas from available ingredients.',
+        techStack: ['Python 3.10+', 'python-telegram-bot', 'OpenAI SDK', 'MiniMax API', 'JSON Storage', 'PM2']
+      },
+      {
         name: 'BIZTRIPS',
+        type: 'enterprise build',
+        url: '',
         description: 'A comprehensive web-based platform engineered to streamline and manage corporate business trip operations and approvals.',
         techStack: ['Java', 'Spring Boot 3.0', 'Filebeat', 'JasperReports', 'Angular 20', 'SQL Server']
       },
       {
         name: 'Front End System (FES)',
+        type: 'enterprise build',
+        url: '',
         description: 'A centralized logging solution enabling efficient log shipping from containerized applications utilizing a Filebeat sidecar architecture.',
         techStack: ['Java', 'Spring Boot 3.0', 'Filebeat', 'JasperReports', 'Oracle Database', 'Angular 19']
       },
       {
         name: 'PRISMA Procurement Workflow',
+        type: 'enterprise build',
+        url: '',
         description: 'A multi-level procurement approval system featuring extensive database locking mechanisms to prevent concurrent access issues.',
         techStack: ['Spring Boot 3.0', 'SQL Server', 'JasperReports', 'Angular 17']
       },
       {
         name: 'Automated Queuing Sub-Application',
+        type: 'enterprise build',
+        url: '',
         description: 'A branch-level customer queuing system integrating robust backend generation logic and thermal printer communications.',
         techStack: ['Java 21', 'Spring Boot 3.0', 'Angular 17']
       },
       {
         name: 'Mandiri Single Sign-On (SSO)',
+        type: 'enterprise build',
+        url: '',
         description: 'A secure, centralized authentication system and single sign-on flow integrating LDAP protocols to manage corporate identities and access control.',
         techStack: ['Java', 'Spring Boot', 'LDAP', 'PostgreSQL', 'JWT']
       }
     ],
     education: [
       {
-        degree: 'S1 — Computer Science',
+        degree: 'S1 - Computer Science',
         institution: 'Universitas Nasional Pasim',
-        period: '2016 – 2020',
+        period: '2016 - 2020',
         details: 'GPA 3.73/4.00 (Cumlaude)'
       },
       {
-        degree: 'D3 — Medical Record',
+        degree: 'D3 - Medical Record',
         institution: 'Poltekkes Kemenkes Tasikmalaya',
-        period: '2016 – 2019',
+        period: '2016 - 2019',
         details: 'GPA 3.71/4.00 (Cumlaude)'
       }
     ],
@@ -135,8 +153,8 @@ export class PortfolioDataService {
     hero: {
       greeting: 'Halo, saya',
       name: 'Fida Muhamad Rifqi',
-      title: 'Backend Engineer (Pengalaman Fullstack)',
-      summary: 'Backend Engineer dengan lebih dari 5 tahun pengalaman di Java, Spring Boot, integrasi sistem, dan pengembangan API. Saya membangun layanan enterprise untuk workflow perbankan yang membutuhkan keamanan, observability, dan reliabilitas.',
+      title: 'Backend Engineer (Fullstack Experience)s & AI Enthusiast',
+      summary: 'Backend Engineer dengan lebih dari 5 tahun pengalaman di Java, Spring Boot, integrasi sistem, dan pengembangan API. Saya membangun layanan enterprise untuk workflow perbankan sambil mengeksplorasi produk AI, chatbot, dan integrasi LLM yang praktis.',
       ctaPrimary: 'Lihat proyek',
       ctaSecondary: 'Hubungi saya'
     },
@@ -144,7 +162,7 @@ export class PortfolioDataService {
       paragraphs: [
         'Saya adalah seorang Backend Engineer yang berorientasi pada kinerja tinggi dengan lebih dari 5 tahun pengalaman langsung dalam merancang, mengembangkan, dan mengoptimalkan aplikasi skala perusahaan. Berspesialisasi dalam Java dan Spring Boot, saya memiliki pemahaman mendalam tentang integrasi antarsistem, microservices, dan optimalisasi database.',
         'Sepanjang karier saya di sektor perbankan, saya memimpin berbagai inisiatif backend, mulai dari membangun REST API hingga mengintegrasikan alur kerja berlapis dan penguatan keamanan. Saya terbiasa berkolaborasi dengan tim lintas fungsi untuk menangani isu produksi dan menjaga arsitektur tetap mudah dirawat.',
-        'Saya menyukai masalah teknis yang punya dampak bisnis nyata: upgrade yang lebih aman, query yang lebih cepat, integrasi yang lebih bersih, dan sistem produksi yang mudah dioperasikan.'
+        'Saya juga seorang AI enthusiast yang suka mengubah masalah sehari-hari menjadi workflow chatbot yang berguna. Eksperimen AI pribadi saya berfokus pada asisten natural language, parsing berbasis LLM, dan otomasi praktis yang tetap mudah digunakan.'
       ]
     },
     skills: this.dataEn.skills, // Keterampilan teknis bahasa universal
@@ -152,7 +170,7 @@ export class PortfolioDataService {
       {
         company: 'PT Bank SMBC Indonesia Tbk',
         role: 'Fullstack Developer (Fokus Backend)',
-        period: 'Maret 2020 – Saat ini',
+        period: 'Maret 2020 - Saat ini',
         description: 'Merancang dan memelihara aplikasi sisi server menggunakan Spring Boot, mengembangkan REST API, mengoptimalkan kueri database, dan menangani integrasi sistem perbankan.',
         highlights: [
           'Memimpin riset dan pengembangan (R&D) sebagai Technical Owner untuk mendesain arsitektur pengiriman log mandiri (Filebeat sidecar) pada ekosistem container/Docker.',
@@ -166,7 +184,7 @@ export class PortfolioDataService {
       {
         company: 'PT Bank Mandiri Tbk',
         role: 'Backend Developer',
-        period: 'Desember 2019 – Maret 2020',
+        period: 'Desember 2019 - Maret 2020',
         description: 'Berkontribusi pada layanan keamanan sisi server (backend) dalam struktur tim Agile.',
         highlights: [
           'Melakukan pengembangan arsitektur otentikasi (login) dan API menggunakan ekosistem Spring Boot.',
@@ -178,7 +196,7 @@ export class PortfolioDataService {
       {
         company: 'Biro Perjalanan Haji dan Umroh',
         role: 'Intern (Analis & Penguji Jaminan Mutu)',
-        period: 'Januari 2020 – Februari 2020',
+        period: 'Januari 2020 - Februari 2020',
         description: 'Fokus pada tahap analisis kebutuhan pengguna, rancangan sistem database, serta memastikan kejelasan antar muka pengguna (UX).',
         highlights: [
           'Mengonsep diagram aliran/relasi data (ERD) guna menstruktur seluruh siklus pendataan utama proyek.',
@@ -189,7 +207,7 @@ export class PortfolioDataService {
       {
         company: 'Poltekkes Kemenkes Tasikmalaya',
         role: 'Intern (Software Tester)',
-        period: 'November 2017 – Januari 2018',
+        period: 'November 2017 - Januari 2018',
         description: 'Membantu tahap validasi program pada proses digitalisasi klasifikasi dunia medis.',
         highlights: [
           'Menyusun skenario kelayakan untuk tes kegunaan sekaligus mengecek keakurasian data bagi kodifikasi ICD-10.',
@@ -199,42 +217,59 @@ export class PortfolioDataService {
     ],
     projects: [
       {
+        name: 'Kulkas Pintar Bot',
+        type: 'AI personal lab',
+        url: 'https://github.com/fidamuhrifqi/kulkas-pintar',
+        description: 'Telegram bot berbasis AI untuk mengelola inventaris kulkas rumah. Bot ini memahami input natural language berbahasa Indonesia, mengonversi satuan, mencatat keluar-masuk stok, dan memberi ide resep dari bahan yang tersedia.',
+        techStack: ['Python 3.10+', 'python-telegram-bot', 'OpenAI SDK', 'MiniMax API', 'JSON Storage', 'PM2']
+      },
+      {
         name: 'BIZTRIPS',
+        type: 'enterprise build',
+        url: '',
         description: 'Platform operasional perjalanan bisnis pegawai berskala perusahaan yang serba lengkap untuk menjadwalkan dan mengelola pengajuan secara terstruktur.',
         techStack: ['Java', 'Spring Boot 3.0', 'Filebeat', 'JasperReports', 'Angular 20', 'SQL Server']
       },
       {
         name: 'Front End System (FES)',
+        type: 'enterprise build',
+        url: '',
         description: 'Aplikasi terpusat yang difokuskan untuk memudahkan pelacakan rekam log internal (log shipping) server menggunakan arsitektur sidecar Filebeat.',
         techStack: ['Java', 'Spring Boot 3.0', 'Filebeat', 'JasperReports', 'Oracle Database', 'Angular 19']
       },
       {
         name: 'Alur Kerja Pengadaan PRISMA',
+        type: 'enterprise build',
+        url: '',
         description: 'Sistem alur penunjukan persetujuan barang yang difasilitasi dengan mekanisme "database locking" untuk menghalau konflik kueri serentak.',
         techStack: ['Spring Boot 3.0', 'SQL Server', 'JasperReports', 'Angular 17']
       },
       {
         name: 'Sub-Aplikasi Antrean Otomatis',
+        type: 'enterprise build',
+        url: '',
         description: 'Sistem pembuatan tiket antrean otomatis tingkat cabang yang terhubung dengan layanan backend dan perintah ke thermal printer.',
         techStack: ['Java 21', 'Spring Boot 3.0', 'Angular 17']
       },
       {
         name: 'Mandiri Single Sign-On (SSO)',
+        type: 'enterprise build',
+        url: '',
         description: 'Sistem autentikasi terpusat untuk alur masuk internal menggunakan koneksi LDAP dan kontrol hak akses pengguna.',
         techStack: ['Java', 'Spring Boot', 'LDAP', 'PostgreSQL', 'JWT']
       }
     ],
     education: [
       {
-        degree: 'S1 — Ilmu Komputer',
+        degree: 'S1 - Ilmu Komputer',
         institution: 'Universitas Nasional Pasim',
-        period: '2016 – 2020',
+        period: '2016 - 2020',
         details: 'IPK 3.73/4.00 (Cumlaude)'
       },
       {
-        degree: 'D3 — Rekam Medis',
+        degree: 'D3 - Rekam Medis',
         institution: 'Poltekkes Kemenkes Tasikmalaya',
-        period: '2016 – 2019',
+        period: '2016 - 2019',
         details: 'IPK 3.71/4.00 (Cumlaude)'
       }
     ],
@@ -260,7 +295,8 @@ export class PortfolioDataService {
     labelBackend: 'Backend',
     labelFrontend: 'Frontend',
     labelDatabase: 'Databases',
-    labelTools: 'DevOps & Tools'
+    labelTools: 'DevOps & Tools',
+    projectLink: 'View repository'
   };
 
   private uiId = {
@@ -281,7 +317,8 @@ export class PortfolioDataService {
     labelBackend: 'Backend',
     labelFrontend: 'Frontend',
     labelDatabase: 'Database',
-    labelTools: 'DevOps & Tools'
+    labelTools: 'DevOps & Tools',
+    projectLink: 'Lihat repository'
   };
 
   // Computed signals

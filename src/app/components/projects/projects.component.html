@@ -6,12 +6,15 @@
       <article *ngFor="let project of projectsData; let i = index; trackBy: trackByIndex" class="project-card card fade-in delay-{{(i % 3) + 1}}" [class.project-card--featured]="i === 0">
         <div class="project-topline">
           <span class="project-index">{{ (i + 1) < 10 ? '0' + (i + 1) : i + 1 }}</span>
-          <span class="project-type">enterprise build</span>
+          <span class="project-type">{{ project.type }}</span>
         </div>
 
         <div class="project-content">
           <h3 class="project-title">{{ project.name }}</h3>
           <p class="project-description">{{ project.description }}</p>
+          <a *ngIf="project.url" class="project-link" [href]="project.url" target="_blank" rel="noopener noreferrer">
+            {{ ui.projectLink }}
+          </a>
         </div>
 
         <div class="tech-stack pill-container">

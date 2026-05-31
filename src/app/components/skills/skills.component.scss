@@ -32,6 +32,13 @@
     repeating-linear-gradient(90deg, transparent 0, transparent 28px, rgba(155, 79, 38, 0.08) 29px);
 }
 
+.skill-card--ai {
+  grid-column: span 2;
+  background:
+    linear-gradient(145deg, var(--surface), var(--accent-soft)),
+    repeating-linear-gradient(0deg, transparent 0, transparent 24px, rgba(155, 79, 38, 0.08) 25px);
+}
+
 .skill-card--compact {
   grid-column: span 2;
 }
@@ -77,6 +84,7 @@
 
   .skill-card,
   .skill-card--primary,
+  .skill-card--ai,
   .skill-card--compact,
   .skill-card--wide {
     grid-column: span 1;
