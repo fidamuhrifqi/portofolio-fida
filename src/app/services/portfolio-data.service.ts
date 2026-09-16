@@ -96,7 +96,7 @@ export class PortfolioDataService {
         type: 'enterprise build',
         url: '',
         description: 'A comprehensive web-based platform engineered to streamline and manage corporate business trip operations and approvals.',
-        techStack: ['Java', 'Spring Boot 3.0', 'Filebeat', 'JasperReports', 'Angular 20', 'SQL Server']
+        techStack: ['Java', 'Spring Boot 4.0', 'Filebeat', 'JasperReports', 'Angular 20', 'SQL Server']
       },
       {
         name: 'Front End System (FES)',
