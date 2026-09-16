@@ -28,10 +28,10 @@ export class PortfolioDataService {
       ]
     },
     skills: {
-      backend: ['Java (8, 17, 21)', 'Spring Boot (2.x, 3.x)', 'Apache Kafka', 'JasperReports'],
+      backend: ['Java (8, 17, 21)', 'Spring Boot (2.x, 3.x, 4.x)', 'Apache Kafka', 'JasperReports'],
       databases: ['PostgreSQL', 'SQL Server', 'Oracle Database', 'MySQL'],
       tools: ['Git', 'Docker', 'CI/CD', 'Elastic', 'WinSCP', 'LDAP', 'JWT', 'Liquibase', 'Jira'],
-      frontend: ['Angular (14, 17, 21)', 'TypeScript', 'JavaScript'],
+      frontend: ['Angular (14, 17, 20, 21)', 'TypeScript', 'JavaScript'],
       ai: ['OpenAI SDK', 'MiniMax API', 'Telegram Bot', 'LLM Prompting', 'Natural Language Parsing']
     },
     experience: [
